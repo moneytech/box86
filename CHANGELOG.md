@@ -1,5 +1,18 @@
-Current version
+v0.1.0
 =======
+* Dynarec!!! Only for ARM (note that dynarec doesn't support JITed code for now)
+* Added real support for getcontext/set/context/makecontext/swapcontext
+* Preliminary signal handling
+* Fixes to SDL(1/2) Image and SDL1 Mixer, and to SDL1.2 RWops usage
+* Fixed numerous issues in opcodes (both interpretor and dynarec). FTL works fine now, among many others
+* Added wrapped gtk support (still ongoing, many libs involved)
+* Make loading of libs more configurable
+* If a wrapped native libs is not found, try to use emulated one
+* Add en env. var. to force use of emulated lib for certain libs
+* Add an env. var. to define wich libGL to use
+* Added Install / Uninstall target (using systemd binfmt)
+* Added more hardware target (RPis, GameShell...)
+* Wrapped more libs (including FreeType, smpeg, ncurses, sndfile...)
 
 v0.0.4
 =======
@@ -8,7 +21,7 @@ v0.0.4
 * Added a few wrapped libs (like libz or some other x11 related libs)
 * For trace enabled build, Trace can be enabled only after a certain amount of opcodes (still, a debugger would be better)
 * Some fixes in a few opcodes, and implemented x87 rounding (SuperMeatBoy behaves better now)
-* FTL 1.6.9 stiil sounds bad, but older 1.5.13 seems fine (different set of libs)
+* FTL 1.6.9 still have corrupted music, but older 1.5.13 seems fine (different set of libs)
 
 v0.0.2
 =======
